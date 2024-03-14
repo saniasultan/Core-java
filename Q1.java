@@ -1,4 +1,4 @@
-package ConditionalStatments;
+package Strings;
 
 import java.util.Scanner;
 
@@ -6,16 +6,14 @@ public class Q1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//Write a program to find greater number between two entered numbers.
-		System.out.println("enter two numbers");
-		Scanner s=new Scanner(System.in);
-		int a=s.nextInt();
-		int b=s.nextInt();
-		if(a>b) {
-			System.out.println(a+" is greater");
-		}
-		else
-			System.out.println(b+" is greater");
+//Write a program to print your entered name in reverse order
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name");
+		String s=sc.next();
+
+		StringBuffer sb=new StringBuffer(s);
+		System.out.println("reverce=sania"+sb.reverse());
+		
 	}
 
 }

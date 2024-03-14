@@ -1,31 +1,33 @@
-package ExceptionHandling;
-class Student1{
-	int marks;
-	Student1(int marks){
-		this.marks=marks;
-	}
-	void display() {
-		try {
-			if(marks>100) {
-				throw new Marksoutofbound("entered wrong marks");
-				
-		}
-			System.out.println("marks="+marks);}
-			catch(Marksoutofbound e) {
-				System.out.println(e.getMessage());
-				
-				}
-		}
-		
-	}
+package oops;
 
-	
+import java.util.Scanner;
+
 public class Student {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-Student1 s=new Student1(101);
-s.display();
+Studentdetails s1=new Studentdetails();
+s1.input();
+s1.display();
+
 	}
 
+}
+class Studentdetails{
+	private int stud_id;
+	public String name;
+	 int rollno;
+	 
+	 void input() {
+		System.out.println("enter student name and roll no");
+		Scanner s=new Scanner(System.in);
+		name=s.next();
+		rollno=s.nextInt();
+		stud_id=s.nextInt();
+		
+	}
+	
+	void display() {
+		System.out.println("Student name="+name+"\trollno="+rollno+" stud id="+stud_id);
+	}
 }

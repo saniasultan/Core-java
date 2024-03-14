@@ -1,4 +1,4 @@
-package ConditionalStatments;
+package Strings;
 
 import java.util.Scanner;
 
@@ -6,16 +6,16 @@ public class Q3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//Write a program to find the entered number is positive or negative.
-		System.out.println("enter one numbers");
-		Scanner s=new Scanner(System.in);
-		int a=s.nextInt();
-		
-		if(a>0) {
-			System.out.println(a+" is positive");
-		}
-		else 
-			System.out.println(a+" is negative");
+//Write a program to find the number of characters present in string without using len() 
+		Scanner sc = new Scanner(System.in);
+		 System.out.println("Enter String");
+		 String name = sc.nextLine();
+		 int count=0;
+		 for(char i:name.toCharArray())
+		 {
+		 count++;
+		 }
+		 System.out.println("Length: "+count);
 	}
 
 }
